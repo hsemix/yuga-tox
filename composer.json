@@ -1,0 +1,30 @@
+{
+    "name": "yuga/tox",
+    "description": "The Yuga Framework Subscriptions/Prices Package.",
+    "keywords": ["framework", "Yuga"],
+    "license": "MIT",
+    "homepage": "https://yuga-framework.gitbook.io/documentation/tox",
+    "authors": [
+        {
+            "name": "Hamidouh Semix",
+            "email": "semix.hamidouh@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">= 7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5|^8.0",
+        "yuga/framework": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tox\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "serve": "php yuga start"
+    }
+}
