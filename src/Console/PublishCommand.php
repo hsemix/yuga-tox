@@ -3,6 +3,7 @@
 namespace Tox\Console;
 
 use Yuga\Console\Command;
+use Yuga\Support\FileSystem;
 
 class PublishCommand extends Command
 {
@@ -13,7 +14,7 @@ class PublishCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Public All Assets';
+    protected $description = 'Publish All publishable Assets';
 
     /**
      * Execute the console command.
@@ -22,7 +23,9 @@ class PublishCommand extends Command
      */
     public function handle()
     {
-        $this->info('Public All Assets.');
+        $this->comment('Moving files');
+        FileSystem::copy(__DIR__ . '/../resources/views/tox/', path('resources/views/tox/'));
+        $this->info('Successfully published assets');
     }
     
 }
