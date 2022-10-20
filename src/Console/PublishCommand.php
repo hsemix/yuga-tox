@@ -27,5 +27,4 @@ class PublishCommand extends Command
         FileSystem::copy(__DIR__.'/../resources/views/tox/', path('resources/views/tox/'));
         $this->info('Successfully published assets');
     }
-    
 }

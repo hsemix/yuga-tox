@@ -24,7 +24,7 @@ class PackageController extends Controller
 
     public function makePayment()
     {
-        Stripe::setApiKey("sk_test_51CD8IZKnutIZb3TV9S9qwDqDwSik5pSfvPVWYWoPb8omTMXlAueO2kx9Y5uDGKYaJ877WqMGibovu7CELV13WLy1006TK1mXpr");
+        Stripe::setApiKey('sk_test_51CD8IZKnutIZb3TV9S9qwDqDwSik5pSfvPVWYWoPb8omTMXlAueO2kx9Y5uDGKYaJ877WqMGibovu7CELV13WLy1006TK1mXpr');
         // $stripe = new StripeClient("sk_test_51CD8IZKnutIZb3TV9S9qwDqDwSik5pSfvPVWYWoPb8omTMXlAueO2kx9Y5uDGKYaJ877WqMGibovu7CELV13WLy1006TK1mXpr");
 
         // $ch = $stripe->charges->capture(
@@ -36,13 +36,13 @@ class PackageController extends Controller
         // echo(Money::USD("10")->getAmount());
         // die();
         $charge = Charge::create([
-            'amount' => Money::USD("10")->getAmount(),
-            "description" => "Test Payment",
-            "currency" => new Currency('USD'),
-            "source" => "pk_test_hu9VjUaHmYP88TNXVZ2Rylpw",
+            'amount'      => Money::USD('10')->getAmount(),
+            'description' => 'Test Payment',
+            'currency'    => new Currency('USD'),
+            'source'      => 'pk_test_hu9VjUaHmYP88TNXVZ2Rylpw',
         ]);
 
         echo '<pre>';
         print_r($charge);
-    }   
+    }
 }
