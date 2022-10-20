@@ -2,10 +2,10 @@
 
 namespace Tox\Controllers;
 
+use Money\Currency;
 use Money\Money;
 use Stripe\Charge;
 use Stripe\Stripe;
-use Money\Currency;
 use Stripe\StripeClient;
 
 class PackageController extends Controller
