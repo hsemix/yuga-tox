@@ -34,7 +34,7 @@ class ToxServiceProvider extends ServiceProvider
     public function boot(Route $router)
     {
         if (!is_dir(path('resources/views/tox'))) {
-            $this->app->get('view')->setTemplateDirectory($this->app->getVendorDir() . '/yuga/tox/src/resources/views'); 
+            $this->app->get('view')->setTemplateDirectory($this->app->getVendorDir().'/yuga/tox/src/resources/views');
         }
         $router->group(['prefix' => 'tox', 'middleware' => 'web', 'namespace' => $this->namespace], function () {
             require __DIR__.'/../routes/tox.php';
