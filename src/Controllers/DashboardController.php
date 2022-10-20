@@ -5,7 +5,7 @@ namespace Tox\Controllers;
 class DashboardController extends Controller
 {
     /**
-     * Get Tox Payments Summary
+     * Get Tox Payments Summary.
      */
     public function getSummary()
     {
@@ -16,4 +16,5 @@ class DashboardController extends Controller
     {
         return view('tox.dashboard.transactions')->withTitle('Transactions');
     }
+    
 }

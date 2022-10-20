@@ -5,7 +5,7 @@ namespace Tox\Controllers;
 class AdminController extends Controller
 {
     /**
-     * Create a new Tox Tier Package
+     * Create a new Tox Tier Package.
      */
     public function createTiers()
     {
@@ -16,4 +16,5 @@ class AdminController extends Controller
     {
         return view('tox.admin.payments')->withTitle('Payments');
     }
+    
 }
