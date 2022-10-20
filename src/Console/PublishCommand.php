@@ -8,7 +8,7 @@ use Yuga\Support\FileSystem;
 class PublishCommand extends Command
 {
     protected $name = 'tox:publish';
-    
+
     /**
      * The console command description.
      *
@@ -24,8 +24,7 @@ class PublishCommand extends Command
     public function handle()
     {
         $this->comment('Moving files');
-        FileSystem::copy(__DIR__ . '/../resources/views/tox/', path('resources/views/tox/'));
+        FileSystem::copy(__DIR__.'/../resources/views/tox/', path('resources/views/tox/'));
         $this->info('Successfully published assets');
     }
-    
 }

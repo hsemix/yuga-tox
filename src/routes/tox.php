@@ -1,6 +1,7 @@
 <?php
 
 Route::get('packages', 'PackageController@getPackages');
+
 Route::post('payment', 'PackageController@makePayment');
 Route::get('payment', 'PackageController@paymentForm');
 Route::get("dashboard", "DashboardController@getSummary");
