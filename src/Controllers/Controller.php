@@ -22,5 +22,4 @@ class Controller extends Base
         $this->view->title = config('app.name', 'Tox Payments');
         $this->view->injectSetup = false;
     }
-    
 }

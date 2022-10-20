@@ -16,5 +16,4 @@ class AdminController extends Controller
     {
         return view('tox.admin.payments')->withTitle('Payments');
     }
-    
 }
