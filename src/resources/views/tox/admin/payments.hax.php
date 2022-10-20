@@ -1,0 +1,1 @@
+@extends('tox.layouts.layout')
