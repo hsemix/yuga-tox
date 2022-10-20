@@ -1,5 +1,7 @@
 <?php
 
+use Yuga\Route\Route;
+
 Route::get('packages', 'PackageController@getPackages');
 
 Route::post('payment', 'PackageController@makePayment');

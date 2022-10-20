@@ -25,7 +25,7 @@
         <div class="flex h-16 items-center justify-between">
           <div class="flex items-center">
             <div class="flex-shrink-0">
-                <a href="#" class="h-8 btn btn-active btn-outline text-white">Tox Payments</a>
+                <a href="#" class="h-8 btn btn-active btn-outline text-white">{{ config('app.name', 'Tox') }} Payments</a>
               <!-- <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Tox Payments"> -->
             </div>
             <div class="hidden md:block">
