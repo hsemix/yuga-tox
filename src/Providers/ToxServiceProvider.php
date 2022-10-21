@@ -29,11 +29,11 @@ class ToxServiceProvider extends ServiceProvider
 
             $this->commands('command.tox.publish');
         }
-        $app['tox_views'] = $app->getVendorDir() . '/yuga/tox/src/resources/views';
+        $app['tox_views'] = $app->getVendorDir().'/yuga/tox/src/resources/views';
     }
 
     public function boot(Route $router)
-    {   
+    {
         $this->view = $this->app->get('view');
         // print_r($this->view);
         // die();
