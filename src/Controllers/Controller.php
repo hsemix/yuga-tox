@@ -10,6 +10,10 @@ class Controller extends Base
     {
         parent::__construct();
 
+        if (!is_dir(path('resources/views/tox'))) {
+            $this->view->setTemplateDirectory(app('tox_views'));
+        }
+        
         $this->view->menu = [
             '/tox/dashboard'            => 'Dashboard',
             '/tox/packages'             => config('app.name', 'Tox').' Tiers',

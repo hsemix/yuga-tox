@@ -29,12 +29,18 @@ class ToxServiceProvider extends ServiceProvider
 
             $this->commands('command.tox.publish');
         }
+        $app['tox_views'] = $app->getVendorDir() . '/yuga/tox/src/resources/views';
     }
 
     public function boot(Route $router)
-    {
+    {   
+        $this->view = $this->app->get('view');
+        // print_r($this->view);
+        // die();
         if (!is_dir(path('resources/views/tox'))) {
-            $this->app->get('view')->setTemplateDirectory($this->app->getVendorDir().'/yuga/tox/src/resources/views');
+            // $view = clone $this->app->get('view');
+            // $view->setTemplateDirectory($this->app->getVendorDir().'/yuga/tox/src/resources/views');
+            $this->view->setTemplateDirectory(path().'tox/src/resources/views');
         }
         $router->group(['prefix' => 'tox', 'middleware' => 'web', 'namespace' => $this->namespace], function () {
             require __DIR__.'/../routes/tox.php';
