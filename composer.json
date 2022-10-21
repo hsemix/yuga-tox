@@ -26,7 +26,14 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "scripts": {
-        "serve": "php yuga start"
+    "extra": {
+        "yuga": {
+            "providers": [
+                "Tox\\Providers\\ToxServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
     }
 }
